@@ -127,3 +127,8 @@ push an existing repository from the command line
 git remote add origin https://github.com/jack1201yii2/test.git
 git branch -M main
 git push -u origin main
+
+Actualizar los cambios que se han hecho en Github a la computadora local c
+*origin hace referenacia a github 
+*master hace referencia a la rama que decea actualizar 
+> git pull origin master 
