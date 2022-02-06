@@ -1,0 +1,129 @@
+Lo primero que debe hacer al instalar Git es establecer su nombre de usuario y dirección de correo electrónico
+
+>git config --global user.name "jack1201yii2"
+>git config --global user.email "jack1201yii2@gmail.com"
+
+
+Comprobación de la configuración
+comando para enumerar todas las configuraciones que Git puede encontrar en ese momento:
+
+>git config --list
+
+
+Inicialización de un repositorio en un directorio existente
+Si tiene un directorio de proyecto que actualmente no está bajo control de versiones y desea comenzar a controlarlo con Git, primero debe ir al directorio de ese proyecto.
+
+>cd C:/Users/user/my_project
+>git init
+
+
+Clonación de un repositorio existente
+git clone URL
+
+Si desea clonar el repositorio en un directorio denominado algo distinto de , puede especificar el nuevo nombre de directorio como argumento adicional
+$ git clone https://github.com/libgit2/libgit2 mylibgit
+
+
+comprobar el estado de los archivos
+
+> git status
+
+Agregar a seguimiento los archivos modificados Y/O creados
+
+> git add .
+
+Confirmar los cambios mediante los commits 
+
+> git commit -am "Commit Inicial"
+
+Ver los commit 
+
+> git log 
+
+Saber las ramas de nuestro repositorio (Aparecera con un asterisco la rama donde nos encontramos	)
+
+> git branch
+
+
+Crear una rama nueva
+
+> git checkout -b Nombre-De-La-Rama
+
+Cambiar de rama
+
+> git branch Nombre-De-La-Rama
+
+
+Unir dos ramas (llamar a la rama que desea unir a la rama donde se encuentra)
+
+> git merge Nombre-De-La-Rama
+
+Eliminar Rama (Forzar el borado de la rama do D mayuscula)
+
+> git branch -d Nombre-De-La-Rama
+
+
+Vincular Git con Github
+
+Crear una firma o clave SSH para conectar la maquina con la cuenta github 
+
+Para hacerlo hay que ir a la cuenta de github despues al menu superior derecho en nuestro perfil>Setings>
+
+de lado izquierdo ir a "SSH and GPG Keys"
+
+en el apratado de "SSH keys" clic al link "generating SSH keys" 
+
+Nos abrira una pagina en donde elegiremos "Generating a new SSH key and adding it to the ssh-agent" 
+
+Nos abrira una pagina en donde hay opciones para windows linux o mac debajo estan los comandos para generar las "SSH key"
+
+Abrir la terminal y ejecutar los siguientes comandos 
+
+
+> ssh-keygen -t ed25519 -C "your_email@example.com"x
+
+	*Nota: si está utilizando un sistema heredado que no es compatible con el algoritmo Ed25519, utilice:
+
+	> ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+Regresar a la pagina e ir al final y selecionar el sig link "Adding a new SSH key to your GitHub account."
+
+Ejecutar el siguiente comando en la terminal para copiar la clave SSH al portapapeles
+
+> clip < ~/.ssh/id_ed25519.pub
+
+Regresamos a la pagina de github setins>SSH and GPG Keys>New SSH Key
+
+	Ponemos un titulo Ej: Terminal Laptop HP y de bajo pegamos la SSH Key
+
+
+Crear nuestro primer repositorio en Github
+
+Subir repositorio local al repositorio Github, ir a la ruta local y ejecutar 
+
+	*si ya se inicializo el repositorio no es necesario volver a hacerlo 
+	> git init 
+
+	> git add . *Importante
+
+	> git commit -m "first commit" *Importante
+
+	*Agregamos el repositorio local a Github
+	> git remote add origin https://github.com/jack1201yii2/test.git 
+
+	*enviamos el repositorio local (main es el nombre de la rama)
+	> git push -u origin main
+
+create a new repository on the command line
+echo "# test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/jack1201yii2/test.git
+git push -u origin main
+
+push an existing repository from the command line
+git remote add origin https://github.com/jack1201yii2/test.git
+git branch -M main
+git push -u origin main
