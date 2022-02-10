@@ -132,3 +132,17 @@ Actualizar los cambios que se han hecho en Github a la computadora local c
 *origin hace referenacia a github 
 *master hace referencia a la rama que decea actualizar 
 > git pull origin master 
+
+
+Cancelar la biblioteca remota asociada en el directorio local
+
+> git remote remove origin
+
+Ver archivos internos 
+
+>ls -a 2 
+
+Eliminar biblioteca local
+
+> rm -rf .git 3 # Eliminación forzada.git
+ 
